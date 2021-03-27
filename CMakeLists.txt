@@ -14,7 +14,9 @@ link_directories(
 )
 
 add_library(NespSdkCpp SHARED utils/Arrays.cpp include/Arrays.h test/utils/ArraysTest.cpp)
+set_target_properties(NespSdkCpp PROPERTIES PREFIX "")
 
+# Main Test Entry
 add_executable(NespSdkCppTest test/main.cpp)
 
 # 将目标文件与库文件进行链接
